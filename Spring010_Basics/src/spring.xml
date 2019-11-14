@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!-- Naming convention for id is camel case notation.
+          The class name is fully qualified class name.
+     -->
+<bean id="myBean" class="com.lnt.core.services.MyBeanServices">
+<constructor-arg value="Larson and Tubro Information Services"></constructor-arg>
+<constructor-arg value="104"></constructor-arg>
+
+<property name="director" value="Mr. S.K.Sinha"></property>
+<property name="addr" ref="addr"></property>
+</bean>
+<bean id="addr" class="com.lnt.core.services.Address">
+<property name="flatAndWing" value="1/A"></property>
+<property name="society" value="Shree Ganesh HS"></property>
+<property name="area" value="Thane" ></property>
+<property name="city" value="Mumbai"></property>
+</bean>
+</beans>
